@@ -63,3 +63,17 @@
     width: 100%;
 }
 
+.vzaddress-lat,
+.vzaddress-lng {
+  float: left;
+  width: 50%;
+}
+
+.vzaddress-lat {
+  clear: both;
+  padding-left: 0;
+}
+
+.vzaddress-lng {
+  padding-left: 0.75em;
+}
