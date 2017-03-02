@@ -74,6 +74,12 @@
             }) }}
         </div>
 
+        <div class="vzaddress-field vzaddress-geocode">
+            <div class="btn geocodebtn" id="geocodeAddress">
+              Get Lat / Lng
+            </div>
+        </div>
+
         <div class="vzaddress-field vzaddress-lat">
             <label for="{{ id~'-lat' }}">{{ 'lat'|t }}</label>
             {{ forms.text({
@@ -93,5 +99,10 @@
                 placeholder: 'Longitude'
             }) }}
         </div>
+
+        <div class="spinner-container">
+          <div class="spinner hidden"></div>
+        </div>
+
     </div>
 </div>

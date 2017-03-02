@@ -36,6 +36,8 @@ class VzAddressFieldType extends BaseFieldType implements IPreviewableFieldType
 
     public function getInputHtml($name, $value) {
         $settings = $this->getSettings();
+        $pluginSettings = craft()->plugins->getPlugin("vzAddress")->getSettings();
+        $googleApiKey = $pluginSettings['googleApiKey'];
 
         if (!$value) {
             $value = new VzAddress_AddressModel();
@@ -51,6 +53,11 @@ class VzAddressFieldType extends BaseFieldType implements IPreviewableFieldType
         // Include our Javascript
         craft()->templates->includeCssResource('vzaddress/css/input.css');
         craft()->templates->includeJsResource('vzaddress/js/input.js');
+
+        if ($googleApiKey) {
+          craft()->templates->includeJs('var googleApiKey ="' . $googleApiKey . '";');
+        }
+
         craft()->templates->includeJs("$('#{$namespacedId}').vzAddress();");
 
         $countries = $this->_getCountryNames();

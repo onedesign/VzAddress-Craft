@@ -66,14 +66,22 @@
 .vzaddress-lat,
 .vzaddress-lng {
   float: left;
-  width: 50%;
-}
-
-.vzaddress-lat {
-  clear: both;
-  padding-left: 0;
-}
-
-.vzaddress-lng {
+  width: 40%;
   padding-left: 0.75em;
+}
+
+.vzaddress-geocode {
+  clear: both;
+  width: 15%;
+  float: left;
+}
+
+.geocodebtn {
+  width: 100%;
+}
+
+.spinner-container {
+  width: 5%;
+  float: right;
+  text-align: right;
 }
