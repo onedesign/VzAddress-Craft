@@ -1,5 +1,5 @@
 {
-    "name": "elivz/vz-address-craft",
+    "name": "elivz/vzaddress",
     "description": "Address fieldtype for the Craft CMS",
     "type": "craft-plugin",
     "require": {
